@@ -9,6 +9,7 @@ import NavigationComponent from './components/NavigationComponent';
 import { AuthProvider } from './contexts/AuthContext';
 import Favorites from './pages/Favorites';
 import RecipeDetail from './components/RecipeDetail';
+import GuestRoute from './components/GuestRoute';
 
 function App() {
   return (
@@ -16,9 +17,30 @@ function App() {
       <AuthProvider>
         <NavigationComponent />
         <Routes>
-          <Route index element={<Home />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
+          <Route
+            index
+            element={
+              <GuestRoute>
+                <Home />
+              </GuestRoute>
+            }
+          />
+          <Route
+            path="/register"
+            element={
+              <GuestRoute>
+                <Register />
+              </GuestRoute>
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <GuestRoute>
+                <Login />
+              </GuestRoute>
+            }
+          />
           <Route
             path="/dashboard"
             element={
