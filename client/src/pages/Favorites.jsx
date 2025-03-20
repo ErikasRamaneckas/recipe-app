@@ -68,6 +68,7 @@ export default function Favorites() {
               <li
                 key={favorite.id}
                 onClick={() => handleRecipeClick(favorite.recipe.id)}
+                className="cursor-pointer transition hover:bg-gray-100 p-3 rounded-lg shadow-sm"
               >
                 <RecipeCard
                   recipe={favorite.recipe}
