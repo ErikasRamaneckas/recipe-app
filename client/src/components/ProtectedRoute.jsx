@@ -7,6 +7,7 @@ export default function ProtectedRoute({ children }) {
   const { isAuthenticated } = useAuth();
 
   useEffect(() => {
+    console.log('Auth status:', isAuthenticated);
     if (!isAuthenticated) {
       navigate('/login');
     }
