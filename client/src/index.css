@@ -1,0 +1,56 @@
+@import 'tailwindcss';
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.heading {
+  @apply text-4xl text-center font-bold text-gray-800 mt-5 mb-1;
+}
+
+.main {
+  @apply flex flex-col items-center justify-start;
+}
+
+.main .link {
+  @apply px-6 py-3 text-white text-lg rounded-lg shadow-md  transition;
+}
+
+.nav {
+  @apply flex justify-between items-center px-8 py-4 bg-gray-300 w-full;
+}
+
+.nav .link {
+  @apply text-xl font-semibold text-gray-800 hover:text-gray-600 mr-10;
+}
+
+.auth-form {
+  @apply space-y-4 w-full max-w-md p-8 space-y-6 bg-white rounded-2xl shadow-md;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.form-input {
+  @apply w-full px-4 py-2 mt-1 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none;
+}
+
+.submit-button {
+  @apply w-full px-4 py-2 font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:outline-none;
+}
+
+.error-message {
+  @apply text-red-500;
+}
